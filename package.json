@@ -1,0 +1,23 @@
+{
+  "name": "asteroids",
+  "version": "1.0.0",
+  "description": "asteroids game created to learn phaser.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lmcnern/asteroids.git"
+  },
+  "keywords": [
+    "game",
+    "asteroids"
+  ],
+  "author": "Lauren McNerney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmcnern/asteroids/issues"
+  },
+  "homepage": "https://github.com/lmcnern/asteroids"
+}
