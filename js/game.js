@@ -62,6 +62,7 @@ gameState.prototype = {
     update: function() {
       this.checkPlayerInput();
       this.checkBoundaries(this.shipSprite);
+      this.bulletGroup.forEachExists(this.checkBoundaries, this);
     },
 
     initGraphics: function() {
@@ -96,20 +97,18 @@ gameState.prototype = {
     },
 
     checkPlayerInput: function() {
-      if(this.key_left.isDown) {
+      if (this.key_left.isDown)  {
         this.shipSprite.body.angularVelocity = -shipProperties.angularVelocity;
       } else if (this.key_right.isDown) {
-        this.shipSprite.body.angularVelocty = shipProperties.angularVelocity;
+        this.shipSprite.body.angularVelocity = shipProperties.angularVelocity;
       } else {
         this.shipSprite.body.angularVelocity = 0;
       }
-
       if(this.key_thrust.isDown) {
         game.physics.arcade.accelerationFromRotation(this.shipSprite.rotation, shipProperties.acceleration, this.shipSprite.body.acceleration);
       } else {
         this.shipSprite.body.acceleration.set(0);
       }
-
       if(this.key_fire.isDown) {
         this.fire();
       }
