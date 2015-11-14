@@ -63,7 +63,7 @@ gameState.prototype = {
       game.physics.startSystem(Phaser.Physics.ARCADE);
       game.physics.enable(this.shipSprite, Phaser.Physics.ARCADE);
       this.shipSprite.body.drag.set(shipProperties.drag);
-      this.shipSprite.body.maxVeolcity.set(shipProperties.maxVelocity);
+      this.shipSprite.body.maxVelocity.set(shipProperties.maxVelocity);
     },
 
     initKeyboard: function() {
@@ -82,7 +82,7 @@ gameState.prototype = {
       }
 
       if (this.key_thrust.isDown) {
-        game.physics.arcade.accelerationFromRoation(this.shipSprite.rotation, shipProperties.acceleration, this.shipSprite.body.acceleration);
+              game.physics.arcade.accelerationFromRotation(this.shipSprite.rotation, shipProperties.acceleration, this.shipSprite.body.acceleration);
       } else {
         this.shipSprite.body.acceleration.set(0);
       }
